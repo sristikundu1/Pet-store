@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Browse Pets</title>
+    <link
+      rel="shortcut icon"
+      href="./c1-assets/logo-header.png"
+      type="image/x-icon"
+    />
+
+    <!-- daisy UI + tailwind  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/e0b35deefc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-primary: rgba(255, 220, 38, 1);
+        --font-sora: "Sora", sans-serif;
+        --font-ADLaM: "ADLaM Display", system-ui;
+      }
+    </style>
+  </head>
+  <body class="">
+    <header>
+      <nav
+        class="bg-[rgba(255,249,244,1)] shadow-[0_4px_4px_-2px_rgba(0,0,0,0.15)] font-sora"
+      >
+        <div class="max-w-[1320px] mx-auto">
+          <div class="navbar">
+            <div class="navbar-start">
+              <div class="flex items-center gap-2">
+                <img
+                  class="w-[47.85px] h-[48px]"
+                  src="./c1-assets/logo-header.png"
+                  alt="logo"
+                />
+                <h1 class="hidden md:block md:text-xl">
+                  Browse<span class="text-[var(--color-primary)]">4</span>Pets
+                </h1>
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul
+                class="menu menu-horizontal px-1 text-[rgba(17,17,17,1)] text-[16px] font-normal"
+              >
+                <li><a href="">Find a pet</a></li>
+                <li><a href="">Breeds</a></li>
+                <li><a href="">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="hidden lg:navbar-end lg:flex lg:gap-3">
+              <i class="fa-regular fa-bell text-xl"></i>
+              <i class="fa-solid fa-magnifying-glass text-xl"></i>
+              <button
+                class="border border-[rgba(255,220,38,1)] rounded-[8px] px-3 py-2 text-[16px]"
+              >
+                Login
+              </button>
+              <button
+                class="border border-[rgba(255,220,38,1)] rounded-[8px] bg-[var(--color-primary)] px-3 py-2 text-[16px]"
+              >
+                Register
+              </button>
+            </div>
+
+            <div class="navbar-end lg:hidden">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <i class="fa-solid fa-bars text-xl block"></i>
+                </div>
+                <ul
+                  tabindex="-1"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-36 p-2 shadow right-0"
+                >
+                  <li><a href="">Find a pet</a></li>
+                  <li><a href="">Breeds</a></li>
+                  <li><a href="">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
