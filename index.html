@@ -33,6 +33,7 @@
       @theme {
         --color-clifford: #da373d;
         --color-primary: rgba(255, 220, 38, 1);
+        --color-secondary: rgba(255, 249, 244, 1);
         --font-sora: "Sora", sans-serif;
         --font-ADLaM: "ADLaM Display", system-ui;
       }
@@ -41,7 +42,7 @@
   <body class="">
     <header>
       <nav
-        class="bg-[rgba(255,249,244,1)] shadow-[0_4px_4px_-2px_rgba(0,0,0,0.15)] font-sora"
+        class="bg-[var(--color-secondary)] shadow-[0_4px_4px_-2px_rgba(0,0,0,0.15)] font-sora"
       >
         <div class="max-w-[1320px] mx-auto">
           <div class="navbar">
@@ -101,7 +102,7 @@
       </nav>
     </header>
 
-    <body>
+    <main>
       <!-- banner  -->
       <section class="py-8 px-4 lg:pt-[100px] lg:pb-[140px]">
         <div class="max-w-[1320px] mx-auto relative">
@@ -139,7 +140,7 @@
           Browse By Categories
         </h1>
         <div
-          class="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-6 lg:gap-1 mb-32"
+          class="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-6 lg:gap-1 mb-11 md:mb-32"
         >
           <div
             class="rounded-[12px] bg-[rgba(249,223,138,1)] w-full lg:w-[180px] h-[200px] flex justify-center items-center flex-col"
@@ -228,7 +229,7 @@
 
       <!-- pet products  -->
 
-      <section class="bg-[rgba(255,249,244,1)] px-4 md:py-36">
+      <section class="bg-[var(--color-secondary)] px-4 md:py-36 md:mb-36">
         <div class="max-w-[1320px] mx-auto">
           <h1
             class="text-2xl mb-8 text-[rgba(17,17,17,1)] md:text-[36px] font-normal leading-[43px] text-left font-ADLaM md:mb-12"
@@ -490,18 +491,24 @@
           Everyday low Price
         </h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-36">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-11 md:mb-36"
+        >
           <div
-            class="md:col-span-2 flex justify-between items-center px-12 rounded-xl bg-[linear-gradient(134.71deg,rgba(248,204,251,1)_1.272%,rgba(172,210,253,1)_100%)] pb-3"
+            class="pt-10 lg:pt-0 lg:col-span-2 lg:flex lg:justify-between lg:items-center px-12 rounded-xl bg-[linear-gradient(134.71deg,rgba(248,204,251,1)_1.272%,rgba(172,210,253,1)_100%)] pb-3"
           >
             <div>
-              <p class="font-ADLaM text-sm leading-[29px] text-left">
+              <p
+                class="hidden lg:block font-sora text-sm leading-[29px] text-left"
+              >
                 Under Price
               </p>
               <h1 class="font-ADLaM text-black text-3xl text-left mb-2">
                 Pet Grooming Mitt
               </h1>
-              <p class="text-white font-ADLaM text-sm leading-[29px] text-left">
+              <p
+                class="hidden lg:block text-white font-ADLaM text-sm leading-[29px] text-left"
+              >
                 (Easy Hair Removal)
               </p>
               <h3
@@ -511,7 +518,11 @@
               </h3>
             </div>
             <div>
-              <img src="./c1-assets/cute-dog-mid.png" alt="pet-dog" />
+              <img
+                class="md:h-96 md:w-80 lg:h-full lg:w-full"
+                src="./c1-assets/cute-dog-mid.png"
+                alt="pet-dog"
+              />
             </div>
           </div>
           <div
@@ -527,12 +538,135 @@
                 $7.99
               </h3>
             </div>
-            <div>
-              <img src="./c1-assets/cute-pet-mid.png" alt="pet-dog" />
+            <div class="md:mt-[-42px] md:ml-[24px] md:mr-[-26px]">
+              <img
+                class="h-96 w-80"
+                src="./c1-assets/cute-pet-mid.png"
+                alt="pet-dog"
+              />
             </div>
           </div>
         </div>
       </section>
-    </body>
+
+      <!-- newsletter  -->
+
+      <section
+        class="bg-[var(--color-secondary)] rounded-2xl max-w-[1320px] lg:mx-auto mx-5 flex flex-col md:flex-row justify-between items-center py-10 px-10 md:px-20 relative z-10 mb-[-216px] md:mb-[-200px]"
+      >
+        <div>
+          <img src="./c1-assets/cute-dog-mid.png" alt="dog" />
+        </div>
+        <div class="flex flex-col justify-start gap-4">
+          <h1
+            class="text-2xl text-[rgba(17,17,17,1)] md:text-[36px] font-normal leading-[43px] text-left font-ADLaM"
+          >
+            Get Pawsome News!
+          </h1>
+          <p class="font-sora text-sm leading-[29px] text-left">
+            Exclusive training tips, ticks, product deals and more.
+          </p>
+          <input
+            class="bg-white rounded-md p-2 border-none"
+            placeholder="Enter email.... "
+            type="email"
+            name=""
+            id=""
+          />
+          <button
+            class="border border-[rgba(255,220,38,1)] rounded-[8px] bg-[var(--color-primary)] px-3 py-2 text-[16px] md:w-[40%]"
+          >
+            Subscribe
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-1">
+      <!-- footer  -->
+
+      <section
+        class="bg-[rgba(255,220,38,0.5)] pt-80 px-4 md:p-10 md:h-[454px]"
+      >
+        <div
+          class="max-w-[1320px] mx-auto footer sm:footer-horizontal items-end h-full"
+        >
+          <nav>
+            <aside class="flex gap-2 items-center">
+              <img
+                class="w-11 h-11"
+                src="./c1-assets/logo-footer.png"
+                alt="footer-logo"
+              />
+              <h1 class="font-sora text-2xl">
+                Browse<span class="text-[var(--color-primary)]">4</span>Pets
+              </h1>
+            </aside>
+            <p
+              class="font-sora text-sm leading-[25px] text-[rgba(17,17,17,0.7)] text-left"
+            >
+              Discover a world of treats, toys, and essentials handpicked for
+              your furry friends
+            </p>
+          </nav>
+          <nav class="font-sora text-sm leading-[29px] text-left">
+            <a class="link link-hover">Find a pet</a>
+            <a class="link link-hover">Breeds</a>
+            <a class="link link-hover">Contact us</a>
+          </nav>
+          <nav>
+            <h6
+              class="font-sora text-[rgba(17,17,17,1)] font-medium text-sm leading-[29px] text-left"
+            >
+              Follow Us
+            </h6>
+            <div class="grid grid-flow-col gap-4">
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  class="fill-current"
+                >
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  ></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  class="fill-current"
+                >
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  ></path>
+                </svg>
+              </a>
+              <a>
+                <i class="fa-brands fa-linkedin w-6 h-6"></i>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  class="fill-current"
+                >
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
